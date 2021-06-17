@@ -17,7 +17,7 @@ class Snack(models.Model):
     purchaser=models.CharField(max_length=64)
     describtion=models.CharField(max_length=256)
     def __str__(self):
-        return self.name
+        return self.title
 
 
     def get_absolute_url(self):

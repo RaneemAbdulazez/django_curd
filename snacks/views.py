@@ -24,7 +24,7 @@ class SnackDetailView(DetailView):
 class SnackCreateView(CreateView):
     template_name='snack_create.html'
     model=Snack
-    fields=['title']
+    fields=["title","purchaser","describtion"]
 
 # Create SnackUpdateView that extends appropriate generic view
 # associated url path is <int:pk>/update/
