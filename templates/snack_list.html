@@ -10,10 +10,24 @@
     {%extends 'base.html'%}
     {%block content%}
     <h1>This is List</h1>
+    <ul>
     {%for snack in object_list%}
-        <li><a href="{%url 'snack_detail' snack.pk%}">{{snack.title}}</a></li>
+        <li>
+            <a href="{% url 'detail_view' snack.pk %}">{{ snack.title }}</a>
+            <h4>{{snack.purchaser}}</h4>
+            <a href="{% url 'delete_view' snack.pk %}">Delete</a>
+            <a href="{% url 'update_view' snack.pk %}">Update</a>
+
+            
+            <br>
+            <br>
+            <br>
+
+
+        </li>
 
     {%endfor%}
+    </ul>
     {%endblock%}
 
 
